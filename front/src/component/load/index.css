@@ -1,0 +1,71 @@
+.alert {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+.alert--success {
+  border-color: green;
+  color: green;
+}
+
+.alert--progress {
+  border-color: blue;
+  color: blue;
+}
+
+.alert--error {
+  border-color: red;
+  color: red;
+}
+
+.alert--default {
+  border-color: #e6e6e6;
+  color: black;
+}
+
+@keyframes loader-animation {
+  0% {
+    background-color: #3498db;
+  }
+
+  50% {
+    background-color: #e74c3c;
+  }
+
+  100% {
+    background-color: #3498db;
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: #3498db;
+  z-index: 10;
+  animation: loader-animation 2s linear infinite;
+}
+
+.skeleton {
+  display: grid;
+  grid-template-rows: repeat(3, 16px);
+  gap: 8px;
+}
+
+.skeleton__item {
+  animation: skeleton-animation 1s infinite alternate;
+}
+
+@keyframes skeleton-animation {
+  0% {
+    background-color: rgb(0, 0, 0, 0.05);
+  }
+
+  100% {
+    background-color: rgb(0, 0, 0, 0.15);
+  }
+}
